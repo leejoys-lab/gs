@@ -66,7 +66,7 @@
     width: 160px;
     margin-right: 32px;
     text-align: center;
-   
+    position: relative;
 }
 #header .nav .gnb > li:last-child{
     margin-right: 0;
@@ -76,6 +76,20 @@
     font-size: 20px; 
     color: #000;
     transition: 0.1s;
+}
+/* 마우스 호버시 네모 생성 */
+#header .nav .gnb li > a::after{
+    content: "";
+    display: none;
+    width: 8px; 
+    height: 8px;
+    background: #0071B9;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}
+#header .nav .gnb li > a:hover::after{
+    display: block;
 }
 #header .nav .gnb li+a{
     padding-bottom: 50px;
@@ -998,6 +1012,7 @@ color: #0071B9;
     align-items: center;
     cursor: pointer;
     transition: 0.2s;
+    position: relative;
 }
 #footer .family p{
     color: #000; 
@@ -1010,6 +1025,53 @@ color: #0071B9;
 #footer .family:hover{background: #000; }
 #footer .family:hover p{color:#fff;}
 #footer .family:hover i{color:#fff;}
+/* 패밀리사이트 */
+#footer .family-site{
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    bottom: 170px;
+    background: #fff;
+    padding: 40px;
+    border: 3px solid #0071B9;
+}
+#footer .family-site i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#footer .family-site i:hover{
+    color: #0071B9;
+}
+#footer .family-site .site-list {
+    display: flex;
+    font-size: 20px;
+    width: 100%
+}
+#footer .family-site .site-list>li{
+    width: 300px;
+    text-align: center;
+    margin-right: 20px;
+}
+#footer .family-site .site-list>li:last-child{
+    margin-right: 0;
+}
+#footer .family-site .site-list>li:last-of-type{
+    width: 450px;
+}
+#footer .family-site .site-list>li>ul{
+    margin-top: 10px;
+}
+#footer .family-site .site-list>li>ul>li{
+    text-align: center;
+}
+#footer .family-site .site-list>li>ul>li>a:hover{
+    transition: 0.3s;
+    color: #0071B9;
+}
 
 
 /* 탑버튼 */
