@@ -14,7 +14,7 @@ function mainInit(){
    master_banner();
    download_tab();
    top_button();
-  
+   family_site();
 }
 
 // 비디오 클릭(재생,중지)
@@ -336,4 +336,19 @@ function top_button() {
    $top.on('click', function(){
       $('html,body').animate({scrollTop:0}, 300);
    });
+}
+
+function family_site(){
+   let $familySite = $('#footer .family');
+   let $siteList = $('#footer .family-site');
+   let $close = $('#footer .family-site i');
+
+   $siteList.hide();
+
+   $familySite.on('click',function(){
+      $siteList.show();
+   })
+   $close.on('click',function(){
+      $siteList.hide();
+   })
 }
