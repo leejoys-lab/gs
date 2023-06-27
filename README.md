@@ -1,6 +1,3 @@
 # gs
-GS건설
-
-
-헤더 메뉴 호버시 해당 메뉴에 네모 생ㅓ
-
+GS건설 리뉴얼
+https://leejoys-lab.github.io/gs/
